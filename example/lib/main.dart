@@ -145,7 +145,7 @@ class _GroupAvatarExamplePageState extends State<GroupAvatarExamplePage> {
               imageUrls: sampleImages.take(4).toList(),
               size: 138,
             ),
-          ),
+      ),
           const SizedBox(height: 32),
           _buildSection(
             context,
@@ -327,7 +327,7 @@ class _GroupAvatarExamplePageState extends State<GroupAvatarExamplePage> {
                   GroupAvatar(
                     imageUrls: sampleImages.take(3).toList(),
                     size: 80,
-                  ),
+            ),
                   const SizedBox(width: 16),
                   GroupAvatar(
                     imageUrls: sampleImages.take(3).toList(),
@@ -337,10 +337,10 @@ class _GroupAvatarExamplePageState extends State<GroupAvatarExamplePage> {
                   GroupAvatar(
                     imageUrls: sampleImages.take(3).toList(),
                     size: 200,
-                  ),
-                ],
-              ),
             ),
+          ],
+        ),
+      ),
           ),
         ],
       ),

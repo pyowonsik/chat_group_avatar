@@ -1,3 +1,7 @@
+## 0.0.2
+
+* Fix screenshot display on pub.dev by converting HTML to markdown format
+
 ## 0.0.1
 
 * Initial release

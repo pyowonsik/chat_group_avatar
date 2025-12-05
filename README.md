@@ -212,40 +212,29 @@ See the `example/` directory for a complete example app.
 
 ### Basic Layouts (1, 2, 3, 4 members)
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/single-and-two-and-three.png" alt="Single, Two, Three, and Four Avatars" width="300"/>
-</div>
+![Single, Two, Three, and Four Avatars](screenshots/single-and-two-and-three.png)
 
 ### Custom Border & Custom Counter & Custom Placeholder
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/custom-border-and-custom-countet-and-custom-place.png" alt="Custom Border, Counter, and Placeholder" width="300"/>
-</div>
+![Custom Border, Counter, and Placeholder](screenshots/custom-border-and-custom-countet-and-custom-place.png)
 
 ### Stack Counter & Square (2, 3, 4 members)
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/stack-with-counter-and-sqaure-2members-3members-4members.png" alt="Stack with Counter and Square Shapes" width="300"/>
-</div>
+![Stack with Counter and Square Shapes](screenshots/stack-with-counter-and-sqaure-2members-3members-4members.png)
 
 ### Rounded Square (2, 3 members)
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/rounded-square-2-members.png" alt="Rounded Square 2 and 3 Members" width="300"/>
-</div>
+![Rounded Square 2 and 3 Members](screenshots/rounded-square-2-members.png)
 
 ### Gesture Events (Long Press & Tap)
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/gesture-avatar-tap.png" alt="Avatar Tap Gesture" width="200"/>
-  <img src="screenshots/gesture-long-press-and-rounded-sqaure-4-members.png" alt="Long Press Gesture" width="200"/>
-</div>
+![Avatar Tap Gesture](screenshots/gesture-avatar-tap.png)
+
+![Long Press Gesture](screenshots/gesture-long-press-and-rounded-sqaure-4-members.png)
 
 ### Rounded Square 4, Custom Counter, Stack
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/custom-counter-and-custom-place-holder-and-different-sizes.png" alt="Rounded Square 4, Custom Counter, and Stack" width="300"/>
-</div>
+![Rounded Square 4, Custom Counter, and Stack](screenshots/custom-counter-and-custom-place-holder-and-different-sizes.png)
 
 ## Contributing
 
