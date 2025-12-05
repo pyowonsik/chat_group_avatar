@@ -185,25 +185,25 @@ GroupAvatar(
 
 ## Parameters
 
-| Parameter                | Type                                     | Default                    | Description                                                                     |
-| ------------------------ | ---------------------------------------- | -------------------------- | ------------------------------------------------------------------------------- |
-| `imageUrls`              | `List<String?>`                          | **required**               | List of image URLs to display                                                   |
-| `size`                   | `double`                                 | `138`                      | Size of the bounding box                                                        |
-| `borderColor`            | `Color?`                                 | `null`                     | Border color (defaults to theme's surface color)                                |
-| `borderWidth`            | `double`                                 | `2.0`                      | Border width                                                                    |
-| `placeholderIcon`        | `Widget?`                                | `null`                     | Custom placeholder icon (defaults to `Icons.person`)                            |
-| `backgroundColor`        | `Color?`                                 | `null`                     | Background color for avatars (defaults to theme's surface color)                |
-| `shape`                  | `AvatarShape`                            | `AvatarShape.circle`       | Avatar shape: `circle`, `square`, or `roundedSquare`                            |
-| `layout`                 | `GroupAvatarLayout`                      | `GroupAvatarLayout.auto`   | Layout mode: `auto` (adaptive) or `stack` (overlapping)                         |
-| `maxVisible`             | `int?`                                   | `null`                     | Maximum number of avatars to display (default: 4 for auto, all for stack)       |
-| `showCounter`            | `bool`                                   | `false`                    | Show counter badge for remaining members                                        |
-| `counterStyle`           | `TextStyle?`                             | `null`                     | Style for the counter text                                                      |
-| `counterBackgroundColor` | `Color?`                                 | `null`                     | Background color for the counter badge                                          |
-| `overlapRatio`           | `double`                                 | `0.3`                      | Overlap ratio for stack layout (0.0 to 1.0)                                     |
-| `stackDirection`         | `Axis`                                   | `Axis.horizontal`          | Stack direction: `Axis.horizontal` or `Axis.vertical`                           |
-| `onTap`                  | `VoidCallback?`                          | `null`                     | Callback when the group avatar is tapped                                        |
-| `onLongPress`            | `VoidCallback?`                          | `null`                     | Callback when the group avatar is long pressed                                  |
-| `onAvatarTap`            | `void Function(int index, String? url)?` | `null`                     | Callback when an individual avatar is tapped                                    |
+| Parameter                | Type                                     | Default                  | Description                                                               |
+| ------------------------ | ---------------------------------------- | ------------------------ | ------------------------------------------------------------------------- |
+| `imageUrls`              | `List<String?>`                          | **required**             | List of image URLs to display                                             |
+| `size`                   | `double`                                 | `138`                    | Size of the bounding box                                                  |
+| `borderColor`            | `Color?`                                 | `null`                   | Border color (defaults to theme's surface color)                          |
+| `borderWidth`            | `double`                                 | `2.0`                    | Border width                                                              |
+| `placeholderIcon`        | `Widget?`                                | `null`                   | Custom placeholder icon (defaults to `Icons.person`)                      |
+| `backgroundColor`        | `Color?`                                 | `null`                   | Background color for avatars (defaults to theme's surface color)          |
+| `shape`                  | `AvatarShape`                            | `AvatarShape.circle`     | Avatar shape: `circle`, `square`, or `roundedSquare`                      |
+| `layout`                 | `GroupAvatarLayout`                      | `GroupAvatarLayout.auto` | Layout mode: `auto` (adaptive) or `stack` (overlapping)                   |
+| `maxVisible`             | `int?`                                   | `null`                   | Maximum number of avatars to display (default: 4 for auto, all for stack) |
+| `showCounter`            | `bool`                                   | `false`                  | Show counter badge for remaining members                                  |
+| `counterStyle`           | `TextStyle?`                             | `null`                   | Style for the counter text                                                |
+| `counterBackgroundColor` | `Color?`                                 | `null`                   | Background color for the counter badge                                    |
+| `overlapRatio`           | `double`                                 | `0.3`                    | Overlap ratio for stack layout (0.0 to 1.0)                               |
+| `stackDirection`         | `Axis`                                   | `Axis.horizontal`        | Stack direction: `Axis.horizontal` or `Axis.vertical`                     |
+| `onTap`                  | `VoidCallback?`                          | `null`                   | Callback when the group avatar is tapped                                  |
+| `onLongPress`            | `VoidCallback?`                          | `null`                   | Callback when the group avatar is long pressed                            |
+| `onAvatarTap`            | `void Function(int index, String? url)?` | `null`                   | Callback when an individual avatar is tapped                              |
 
 ## Layout Details
 
