@@ -212,29 +212,29 @@ See the `example/` directory for a complete example app.
 
 ### Basic Layouts (1, 2, 3, 4 members)
 
-![Single, Two, Three, and Four Avatars](screenshots/single-and-two-and-three.png)
+![Single, Two, Three, and Four Avatars](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/single-and-two-and-three.png)
 
 ### Custom Border & Custom Counter & Custom Placeholder
 
-![Custom Border, Counter, and Placeholder](screenshots/custom-border-and-custom-countet-and-custom-place.png)
+![Custom Border, Counter, and Placeholder](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/custom-border-and-custom-countet-and-custom-place.png)
 
 ### Stack Counter & Square (2, 3, 4 members)
 
-![Stack with Counter and Square Shapes](screenshots/stack-with-counter-and-sqaure-2members-3members-4members.png)
+![Stack with Counter and Square Shapes](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/stack-with-counter-and-sqaure-2members-3members-4members.png)
 
 ### Rounded Square (2, 3 members)
 
-![Rounded Square 2 and 3 Members](screenshots/rounded-square-2-members.png)
+![Rounded Square 2 and 3 Members](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/rounded-square-2-members.png)
 
 ### Gesture Events (Long Press & Tap)
 
-![Avatar Tap Gesture](screenshots/gesture-avatar-tap.png)
+![Avatar Tap Gesture](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/gesture-avatar-tap.png)
 
-![Long Press Gesture](screenshots/gesture-long-press-and-rounded-sqaure-4-members.png)
+![Long Press Gesture](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/gesture-long-press-and-rounded-sqaure-4-members.png)
 
 ### Rounded Square 4, Custom Counter, Stack
 
-![Rounded Square 4, Custom Counter, and Stack](screenshots/custom-counter-and-custom-place-holder-and-different-sizes.png)
+![Rounded Square 4, Custom Counter, and Stack](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/custom-counter-and-custom-place-holder-and-different-sizes.png)
 
 ## Contributing
 
