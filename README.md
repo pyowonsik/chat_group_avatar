@@ -213,46 +213,35 @@ See the `example/` directory for a complete example app.
 ### Basic Layouts
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/single-avatar.png" alt="Single Avatar" width="200"/>
-  <img src="screenshots/two-avatars.png" alt="Two Avatars" width="200"/>
-  <img src="screenshots/three-avatars.png" alt="Three Avatars" width="200"/>
-  <img src="screenshots/four-avatars.png" alt="Four Avatars" width="200"/>
+  <img src="screenshots/single-and-two-and-three.png" alt="Single, Two, and Three Avatars" width="300"/>
 </div>
 
 ### Counter Badge & Stack Layout
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/counter-badge.png" alt="Counter Badge" width="200"/>
-  <img src="screenshots/stack-layout.png" alt="Stack Layout" width="200"/>
-  <img src="screenshots/stack-with-counter.png" alt="Stack with Counter" width="200"/>
+  <img src="screenshots/stack-with-counter-and-sqaure-2members-3members-4members.png" alt="Stack with Counter and Square Shapes" width="300"/>
 </div>
 
 ### Different Shapes
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/square-2-members.png" alt="Square 2 Members" width="200"/>
-  <img src="screenshots/square-3-members.png" alt="Square 3 Members" width="200"/>
-  <img src="screenshots/square-4-members.png" alt="Square 4 Members" width="200"/>
   <img src="screenshots/rounded-square-2-members.png" alt="Rounded Square 2 Members" width="200"/>
-  <img src="screenshots/rounded-square-3-members.png" alt="Rounded Square 3 Members" width="200"/>
-  <img src="screenshots/rounded-square-4-members.png" alt="Rounded Square 4 Members" width="200"/>
+  <img src="screenshots/gesture-long-press-and-rounded-sqaure-4-members.png" alt="Rounded Square 4 Members" width="200"/>
 </div>
 
 ### Customization Options
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/custom-border.png" alt="Custom Border" width="200"/>
+  <img src="screenshots/custom-border-and-custom-countet-and-custom-place.png" alt="Custom Border, Counter, and Placeholder" width="300"/>
+  <img src="screenshots/custom-counter-and-custom-place-holder-and-different-sizes.png" alt="Custom Counter, Placeholder, and Different Sizes" width="300"/>
   <img src="screenshots/custom-counter-style.png" alt="Custom Counter Style" width="200"/>
-  <img src="screenshots/custom-placeholder.png" alt="Custom Placeholder" width="200"/>
-  <img src="screenshots/different-sizes.png" alt="Different Sizes" width="200"/>
 </div>
 
 ### Gesture Events
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/gesture-tap.png" alt="Tap Gesture" width="200"/>
-  <img src="screenshots/gesture-long-press.png" alt="Long Press Gesture" width="200"/>
-  <img src="screenshots/gesture-avatar-tap.png" alt="Avatar Tap Gesture" width="200"/>
+  <img src="screenshots/gesture-tab.png" alt="Tap Gesture" width="200"/>
+  <img src="screenshots/gesture-long-press-and-rounded-sqaure-4-members.png" alt="Long Press Gesture" width="200"/>
 </div>
 
 ## Contributing
