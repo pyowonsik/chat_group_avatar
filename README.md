@@ -270,4 +270,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-If you encounter any issues or have feature requests, please file an issue on the [GitHub repository](https://github.com/yourusername/chat_group_avatar).
+If you encounter any issues or have feature requests, please file an issue on the [GitHub repository](https://github.com/pyowonsik/chat_group_avatar).
