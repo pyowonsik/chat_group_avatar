@@ -6,7 +6,7 @@ void main() {
   group('GroupAvatar', () {
     testWidgets('renders single avatar correctly', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: ['https://example.com/avatar1.jpg'],
@@ -22,7 +22,7 @@ void main() {
     testWidgets('renders two avatars in diagonal layout',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [
@@ -41,7 +41,7 @@ void main() {
     testWidgets('renders three avatars in triangular layout',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [
@@ -61,7 +61,7 @@ void main() {
     testWidgets('renders four avatars in grid layout',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [
@@ -82,7 +82,7 @@ void main() {
     testWidgets('renders placeholder for empty imageUrls',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [],
@@ -99,7 +99,7 @@ void main() {
     testWidgets('renders placeholder for null imageUrls',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [null, null],
@@ -118,7 +118,7 @@ void main() {
       const customIcon = Icon(Icons.account_circle);
 
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [null],
@@ -136,7 +136,7 @@ void main() {
 
     testWidgets('applies custom border color', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: ['https://example.com/avatar1.jpg'],
@@ -152,7 +152,7 @@ void main() {
 
     testWidgets('applies custom border width', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: ['https://example.com/avatar1.jpg'],
@@ -169,7 +169,7 @@ void main() {
     testWidgets('limits to first 4 avatars for 4+ count',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [
@@ -231,7 +231,7 @@ void main() {
     testWidgets('renders stack layout when layout is stack',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [
@@ -252,7 +252,7 @@ void main() {
     testWidgets('renders square avatars when shape is square',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: ['https://example.com/avatar1.jpg'],
@@ -269,7 +269,7 @@ void main() {
     testWidgets('renders rounded square avatars when shape is roundedSquare',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: ['https://example.com/avatar1.jpg'],
@@ -289,7 +289,7 @@ void main() {
         MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
-              imageUrls: ['https://example.com/avatar1.jpg'],
+              imageUrls: const ['https://example.com/avatar1.jpg'],
               size: 138,
               onTap: () {},
             ),
@@ -306,7 +306,7 @@ void main() {
         MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
-              imageUrls: ['https://example.com/avatar1.jpg'],
+              imageUrls: const ['https://example.com/avatar1.jpg'],
               size: 138,
               onLongPress: () {},
             ),
@@ -323,7 +323,7 @@ void main() {
         MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
-              imageUrls: [
+              imageUrls: const [
                 'https://example.com/avatar1.jpg',
                 'https://example.com/avatar2.jpg',
               ],
@@ -342,7 +342,7 @@ void main() {
 
     testWidgets('renders vertical stack layout', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [
@@ -362,7 +362,7 @@ void main() {
 
     testWidgets('respects overlapRatio parameter', (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: GroupAvatar(
               imageUrls: [
@@ -383,7 +383,7 @@ void main() {
     testWidgets('stack layout works with different shapes',
         (WidgetTester tester) async {
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             body: Column(
               children: [
