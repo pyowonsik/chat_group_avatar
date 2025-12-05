@@ -240,7 +240,7 @@ See the `example/` directory for a complete example app.
 ### Gesture Events
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="screenshots/gesture-tab.png" alt="Tap Gesture" width="200"/>
+  <img src="screenshots/gesture-tap.png" alt="Tap Gesture" width="200"/>
   <img src="screenshots/gesture-long-press-and-rounded-sqaure-4-members.png" alt="Long Press Gesture" width="200"/>
 </div>
 
