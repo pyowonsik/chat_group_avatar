@@ -228,7 +228,7 @@ void main() {
       expect(find.text('+8'), findsOneWidget);
     });
 
-    testWidgets('renders stack layout when shape is stack',
+    testWidgets('renders stack layout when layout is stack',
         (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
@@ -240,7 +240,7 @@ void main() {
                 'https://example.com/avatar3.jpg',
               ],
               size: 138,
-              shape: AvatarShape.stack,
+              layout: GroupAvatarLayout.stack,
             ),
           ),
         ),
@@ -338,6 +338,80 @@ void main() {
 
       // Verify widget is rendered
       expect(find.byType(GroupAvatar), findsOneWidget);
+    });
+
+    testWidgets('renders vertical stack layout', (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: GroupAvatar(
+              imageUrls: [
+                'https://example.com/avatar1.jpg',
+                'https://example.com/avatar2.jpg',
+              ],
+              size: 138,
+              layout: GroupAvatarLayout.stack,
+              stackDirection: Axis.vertical,
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(GroupAvatar), findsOneWidget);
+    });
+
+    testWidgets('respects overlapRatio parameter', (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: GroupAvatar(
+              imageUrls: [
+                'https://example.com/avatar1.jpg',
+                'https://example.com/avatar2.jpg',
+              ],
+              size: 138,
+              layout: GroupAvatarLayout.stack,
+              overlapRatio: 0.5,
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(GroupAvatar), findsOneWidget);
+    });
+
+    testWidgets('stack layout works with different shapes',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: Column(
+              children: [
+                GroupAvatar(
+                  imageUrls: [
+                    'https://example.com/avatar1.jpg',
+                    'https://example.com/avatar2.jpg',
+                  ],
+                  size: 138,
+                  layout: GroupAvatarLayout.stack,
+                  shape: AvatarShape.square,
+                ),
+                GroupAvatar(
+                  imageUrls: [
+                    'https://example.com/avatar1.jpg',
+                    'https://example.com/avatar2.jpg',
+                  ],
+                  size: 138,
+                  layout: GroupAvatarLayout.stack,
+                  shape: AvatarShape.roundedSquare,
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(GroupAvatar), findsNWidgets(2));
     });
   });
 }

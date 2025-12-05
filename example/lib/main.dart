@@ -166,7 +166,7 @@ class _GroupAvatarExamplePageState extends State<GroupAvatarExamplePage> {
             child: GroupAvatar(
               imageUrls: sampleImages.take(5).toList(),
               size: 138,
-              shape: AvatarShape.stack,
+              layout: GroupAvatarLayout.stack,
             ),
           ),
           const SizedBox(height: 32),
@@ -177,7 +177,7 @@ class _GroupAvatarExamplePageState extends State<GroupAvatarExamplePage> {
             child: const GroupAvatar(
               imageUrls: sampleImages,
               size: 138,
-              shape: AvatarShape.stack,
+              layout: GroupAvatarLayout.stack,
               maxVisible: 4,
               showCounter: true,
             ),
@@ -341,6 +341,123 @@ class _GroupAvatarExamplePageState extends State<GroupAvatarExamplePage> {
           ],
         ),
       ),
+          ),
+          const SizedBox(height: 32),
+          _buildSection(
+            context,
+            title: 'Vertical Stack Layout',
+            subtitle: 'Stack layout in vertical direction',
+            child: GroupAvatar(
+              imageUrls: sampleImages.take(4).toList(),
+              size: 138,
+              layout: GroupAvatarLayout.stack,
+              stackDirection: Axis.vertical,
+              showCounter: true,
+            ),
+          ),
+          const SizedBox(height: 32),
+          _buildSection(
+            context,
+            title: 'Custom Overlap Ratio',
+            subtitle: 'Different overlap ratios (0.1, 0.3, 0.5)',
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      GroupAvatar(
+                        imageUrls: sampleImages.take(4).toList(),
+                        size: 100,
+                        layout: GroupAvatarLayout.stack,
+                        overlapRatio: 0.1,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text('0.1', style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
+                  const SizedBox(width: 16),
+                  Column(
+                    children: [
+                      GroupAvatar(
+                        imageUrls: sampleImages.take(4).toList(),
+                        size: 100,
+                        layout: GroupAvatarLayout.stack,
+                        overlapRatio: 0.3,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text('0.3', style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
+                  const SizedBox(width: 16),
+                  Column(
+                    children: [
+                      GroupAvatar(
+                        imageUrls: sampleImages.take(4).toList(),
+                        size: 100,
+                        layout: GroupAvatarLayout.stack,
+                        overlapRatio: 0.5,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text('0.5', style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(height: 32),
+          _buildSection(
+            context,
+            title: 'Stack with Different Shapes',
+            subtitle: 'Stack layout works with all shapes',
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      GroupAvatar(
+                        imageUrls: sampleImages.take(3).toList(),
+                        size: 100,
+                        layout: GroupAvatarLayout.stack,
+                        shape: AvatarShape.circle,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text('Circle', style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
+                  const SizedBox(width: 16),
+                  Column(
+                    children: [
+                      GroupAvatar(
+                        imageUrls: sampleImages.take(3).toList(),
+                        size: 100,
+                        layout: GroupAvatarLayout.stack,
+                        shape: AvatarShape.square,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text('Square', style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
+                  const SizedBox(width: 16),
+                  Column(
+                    children: [
+                      GroupAvatar(
+                        imageUrls: sampleImages.take(3).toList(),
+                        size: 100,
+                        layout: GroupAvatarLayout.stack,
+                        shape: AvatarShape.roundedSquare,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text('Rounded', style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),

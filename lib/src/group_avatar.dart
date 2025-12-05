@@ -11,14 +11,24 @@ enum AvatarShape {
 
   /// Square avatars with rounded corners
   roundedSquare,
+}
 
-  /// Horizontal stack layout (overlapping from left to right)
+/// Group avatar layout options
+enum GroupAvatarLayout {
+  /// Automatic layout based on member count
+  /// - 1: single avatar
+  /// - 2: two diagonal overlapped avatars
+  /// - 3: triangular pattern
+  /// - 4+: 2x2 grid
+  auto,
+
+  /// Horizontal stack layout (overlapping from left to right or right to left)
   stack,
 }
 
 /// Group avatar that adapts layout by member count
-/// - 1: single circle
-/// - 2: two diagonal overlapped circles (top-right & bottom-left)
+/// - 1: single avatar
+/// - 2: two diagonal overlapped avatars (top-right & bottom-left)
 /// - 3: triangular pattern (top-center, bottom-left, bottom-right)
 /// - 4+: 2x2 grid (no overlap, first 4)
 /// - stack: horizontal overlapping layout
@@ -32,15 +42,19 @@ class GroupAvatar extends StatelessWidget {
     this.placeholderIcon,
     this.backgroundColor,
     this.shape = AvatarShape.circle,
+    this.layout = GroupAvatarLayout.auto,
     this.maxVisible,
     this.showCounter = false,
     this.counterStyle,
     this.counterBackgroundColor,
+    this.overlapRatio = 0.3,
+    this.stackDirection = Axis.horizontal,
     this.onTap,
     this.onLongPress,
     this.onAvatarTap,
     super.key,
-  });
+  }) : assert(overlapRatio >= 0.0 && overlapRatio <= 1.0,
+            'overlapRatio must be between 0.0 and 1.0');
 
   /// Image URLs to display
   final List<String?> imageUrls;
@@ -63,20 +77,40 @@ class GroupAvatar extends StatelessWidget {
   final Color? backgroundColor;
 
   /// Avatar shape (default: circle)
+  /// Options: circle, square, roundedSquare
   final AvatarShape shape;
+
+  /// Layout mode (default: auto)
+  /// - auto: Automatically adjusts layout based on member count
+  /// - stack: Horizontal/vertical overlapping layout
+  final GroupAvatarLayout layout;
 
   /// Maximum number of avatars to display
   /// If null, uses default behavior (4 for grid, all for stack)
   final int? maxVisible;
 
   /// Show counter badge for remaining avatars (default: false)
+  /// Displays "+N" badge for members beyond maxVisible
   final bool showCounter;
 
   /// Style for the counter text
+  /// If not provided, uses white bold text
   final TextStyle? counterStyle;
 
   /// Background color for the counter badge
+  /// If not provided, uses Theme's primary color
   final Color? counterBackgroundColor;
+
+  /// Overlap ratio for stack layout (default: 0.3)
+  /// Value between 0.0 (no overlap) and 1.0 (full overlap)
+  /// Only applies to stack layout
+  final double overlapRatio;
+
+  /// Stack direction (default: horizontal)
+  /// - Axis.horizontal: Stack from left to right
+  /// - Axis.vertical: Stack from top to bottom
+  /// Only applies to stack layout
+  final Axis stackDirection;
 
   /// Callback when the group avatar is tapped
   final VoidCallback? onTap;
@@ -92,7 +126,7 @@ class GroupAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget content;
 
-    if (shape == AvatarShape.stack) {
+    if (layout == GroupAvatarLayout.stack) {
       content = _stackLayout(context);
     } else {
       final count = imageUrls.length;
@@ -248,34 +282,66 @@ class GroupAvatar extends StatelessWidget {
 
     // Calculate avatar size and overlap
     final avatarSize = size * 0.7;
-    final overlap = avatarSize * 0.3;
-    final totalWidth =
-        avatarSize + (visibleUrls.length - 1) * (avatarSize - overlap);
+    final overlap = avatarSize * overlapRatio;
 
-    return SizedBox(
-      height: size,
-      width: totalWidth > size ? size : totalWidth,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          ...visibleUrls.asMap().entries.map((entry) {
-            final index = entry.key;
-            final url = entry.value;
-            return Positioned(
-              left: index * (avatarSize - overlap),
-              top: (size - avatarSize) / 2,
-              child: _buildAvatar(context, url, avatarSize, index),
-            );
-          }),
-          if (showCounter && remainingCount > 0)
-            Positioned(
-              left: visibleUrls.length * (avatarSize - overlap) - overlap,
-              top: (size - avatarSize) / 2,
-              child: _buildCounter(context, remainingCount, avatarSize),
-            ),
-        ],
-      ),
-    );
+    if (stackDirection == Axis.horizontal) {
+      final totalWidth =
+          avatarSize + (visibleUrls.length - 1) * (avatarSize - overlap);
+
+      return SizedBox(
+        height: size,
+        width: totalWidth > size ? size : totalWidth,
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            ...visibleUrls.asMap().entries.map((entry) {
+              final index = entry.key;
+              final url = entry.value;
+              return Positioned(
+                left: index * (avatarSize - overlap),
+                top: (size - avatarSize) / 2,
+                child: _buildAvatar(context, url, avatarSize, index),
+              );
+            }),
+            if (showCounter && remainingCount > 0)
+              Positioned(
+                left: visibleUrls.length * (avatarSize - overlap),
+                top: (size - avatarSize) / 2,
+                child: _buildCounter(context, remainingCount, avatarSize),
+              ),
+          ],
+        ),
+      );
+    } else {
+      // Vertical stack
+      final totalHeight =
+          avatarSize + (visibleUrls.length - 1) * (avatarSize - overlap);
+
+      return SizedBox(
+        width: size,
+        height: totalHeight > size ? size : totalHeight,
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            ...visibleUrls.asMap().entries.map((entry) {
+              final index = entry.key;
+              final url = entry.value;
+              return Positioned(
+                top: index * (avatarSize - overlap),
+                left: (size - avatarSize) / 2,
+                child: _buildAvatar(context, url, avatarSize, index),
+              );
+            }),
+            if (showCounter && remainingCount > 0)
+              Positioned(
+                top: visibleUrls.length * (avatarSize - overlap),
+                left: (size - avatarSize) / 2,
+                child: _buildCounter(context, remainingCount, avatarSize),
+              ),
+          ],
+        ),
+      );
+    }
   }
 
   Widget _buildAvatar(
@@ -341,8 +407,6 @@ class GroupAvatar extends StatelessWidget {
         return BorderRadius.zero;
       case AvatarShape.roundedSquare:
         return BorderRadius.circular(diameter * 0.2);
-      case AvatarShape.stack:
-        return BorderRadius.circular(diameter / 2);
     }
   }
 

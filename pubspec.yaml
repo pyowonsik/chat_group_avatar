@@ -1,6 +1,6 @@
 name: chat_group_avatar
 description: 'A Flutter package for displaying group chat avatars with adaptive overlapping layouts. Perfect for chat apps like KakaoTalk, WhatsApp, and Telegram.'
-version: 0.0.3
+version: 0.1.0
 homepage: https://github.com/pyowonsik/chat_group_avatar
 
 environment:
