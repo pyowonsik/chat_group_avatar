@@ -1,11 +1,13 @@
 ## 0.1.0
 
 **Breaking Changes:**
+
 - Separated `AvatarShape` and `GroupAvatarLayout` enums for better API design
 - `AvatarShape.stack` is now `GroupAvatarLayout.stack`
 - Migration: Change `shape: AvatarShape.stack` to `layout: GroupAvatarLayout.stack`
 
 **New Features:**
+
 - Added `GroupAvatarLayout` enum (auto, stack) for layout control
 - Added `overlapRatio` parameter (0.0 to 1.0) for customizable stack overlap
 - Added `stackDirection` parameter (Axis.horizontal, Axis.vertical) for vertical stacking
@@ -13,6 +15,7 @@
 - Improved documentation with comprehensive parameter descriptions
 
 **Improvements:**
+
 - Fixed stack layout counter position (no longer overlaps last avatar)
 - Better separation of concerns between shape and layout
 - More flexible and intuitive API

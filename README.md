@@ -276,6 +276,10 @@ See the `example/` directory for a complete example app.
 
 ![Rounded Square 4, Custom Counter, and Stack](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/custom-counter-and-custom-place-holder-and-different-sizes.png)
 
+### Vertical Stack & Custom Overlap & Different Shapes
+
+![Vertical Stack Layout, Custom Overlap Ratios, and Stack with Different Shapes](https://raw.githubusercontent.com/pyowonsik/chat_group_avatar/main/screenshots/vertical-stack-and-custom-overlab-stack-with-different-shapes.png)
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
